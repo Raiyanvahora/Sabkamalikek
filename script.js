@@ -78,6 +78,7 @@
     var destination = (data.get('destination') || '').trim();
     var date = data.get('date') || '';
     var passengers = (data.get('passengers') || '').trim();
+    var vehicle = (data.get('vehicle') || '').trim();
 
     var lines = [
       'Hi Sabka Malik Ek Tours! I would like to enquire about a Tempo Traveller booking.',
@@ -88,6 +89,7 @@
       'Destination: ' + destination,
       'Travel Date: ' + date,
       'Number of Passengers: ' + passengers,
+      'Preferred Vehicle: ' + vehicle,
       '',
       'Please share the exact quote. Thank you!'
     ];

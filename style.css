@@ -431,12 +431,22 @@ section { padding: 84px 0; scroll-margin-top: var(--header-h); }
 .form-row { display: flex; flex-direction: column; gap: 7px; }
 .form-row-full { grid-column: 1 / -1; text-align: center; }
 .form-row label { font-size: .84rem; font-weight: 600; color: var(--ink); }
-.form-row input {
+.form-row input,
+.form-row select {
   padding: 13px 16px; border: 1.5px solid var(--border-light); border-radius: var(--radius-sm);
   font-family: var(--font-body); font-size: 16px; color: var(--ink); background: var(--gray-50);
   transition: border-color .2s var(--ease), background .2s var(--ease);
 }
+.form-row select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23333' d='M1 1l5 5 5-5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+  cursor: pointer;
+}
 .form-row input:focus { outline: none; border-color: var(--blue); background: var(--white); }
+.form-row select:focus { outline: none; border-color: var(--blue); background-color: var(--white); }
 .form-note { margin-top: 14px; font-size: .84rem; color: var(--gray-500); }
 .form-note a { color: var(--ink); font-weight: 700; text-decoration: underline; }
 
